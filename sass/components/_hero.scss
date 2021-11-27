@@ -1,0 +1,48 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 1600px;
+  height: 600px;
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/studio/bckg-img.jpg);
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  &__button {
+    display: inline-block;
+    width: 200px;
+    border-radius: 4px;
+    padding: 10px 32px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    background-color: $accent-text-color;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

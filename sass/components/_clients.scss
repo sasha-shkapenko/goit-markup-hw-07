@@ -1,0 +1,34 @@
+.clients {
+  @extend %section;
+  &__title {
+    @extend %section__title;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo-box {
+    width: 170px;
+    height: 92px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+
+    transition: border 250ms $animation-timing-function,
+      color 250ms $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-text-color;
+      color: $accent-text-color;
+    }
+  }
+  &__logo {
+    height: 60px;
+    width: 106px;
+    fill: currentColor;
+  }
+}

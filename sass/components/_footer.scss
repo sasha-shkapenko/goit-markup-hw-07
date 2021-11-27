@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+  &__contacts {
+    flex-grow: 1;
+  }
+  &__logo {
+    @extend %logo;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+.logo--color-foot {
+  color: #ffffff;
+}
+
+/* Address Footer */
+.address {
+  &__item--white {
+    color: #ffffff;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__link {
+    color: $primary-text-color;
+
+    transition: color 250ms $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+}
+
+/* Join us */
+.join {
+  margin-left: 70px;
+  &__title {
+    @extend %footer__title;
+  }
+  &__icon-box {
+    @extend %socials__icon-box;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms $animation-timing-function;
+  }
+  &__icon {
+    @extend %socials__icon;
+    fill: #ffffff;
+  }
+}
+.socials {
+  @extend %socials;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+/* Subscribe */
+.subscribe {
+  margin-left: 93px;
+  &__form {
+    width: auto;
+  }
+  &__title {
+    @extend %footer__title;
+  }
+  &__email {
+    padding: 15px 16px;
+
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    width: 358px;
+    height: 50px;
+    color: #ffffff;
+  }
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 28px;
+    margin-left: 12px;
+
+    width: 200px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: $accent-text-color;
+
+    font-family: inherit;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    fill: white;
+  }
+  &__icon {
+    margin-left: 10px;
+  }
+}

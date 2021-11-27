@@ -1,0 +1,117 @@
+.filter {
+  margin-bottom: 50px;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+    text-align: center;
+
+    background-color: #f5f4fa;
+    color: $titles-text-color;
+    font-size: 16px;
+    line-height: 1.63;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: box-shadow 250ms $animation-timing-function,
+      background-color 250ms $animation-timing-function,
+      color 250ms $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      background-color: $accent-text-color;
+      color: #ffffff;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.projects {
+  @extend %section;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    transition: box-shadow 250ms $animation-timing-function;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.product {
+  &__thumb {
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  &__about {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms $animation-timing-function;
+
+    .product:hover &,
+    .product:focus & {
+      transform: translateY(0);
+    }
+  }
+
+  &__descr {
+    padding: 20px 24px;
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    color: $titles-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  &__type {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}

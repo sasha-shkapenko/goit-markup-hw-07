@@ -1,0 +1,74 @@
+@import "../utils/placeholders";
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
+  &__logo {
+    @extend %logo;
+    margin-right: 93px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}
+.logo--color-head {
+  color: $titles-text-color;
+}
+
+/* site nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link--current {
+  @extend %site-nav__link;
+  color: $accent-text-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    height: 4px;
+    width: 100%;
+
+    background-color: $accent-text-color;
+    border-radius: 2px;
+  }
+}
+.site-nav__link--downline {
+  @extend %site-nav__link;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    height: 4px;
+    width: 100%;
+
+    background-color: $accent-text-color;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 250ms $animation-timing-function;
+  }
+}
+
+.site-nav__link--downline:hover::after {
+  transform: scaleX(1);
+}
