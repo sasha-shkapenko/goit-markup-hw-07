@@ -1,4 +1,4 @@
-.contacts__list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
@@ -6,7 +6,7 @@
 .contacts__item:not(:last-child) {
   margin-right: 50px;
 }
-.contacts__link--top {
+.contacts__link {
   @extend %contacts__link;
   display: flex;
   align-items: center;
